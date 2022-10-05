@@ -1,0 +1,9 @@
+---
+k3s_version: "${k3s_version}"
+ansible_user: "${ansible_user}"
+ansible_ssh_private_key_file: "${ansible_ssh_private_key_file}"
+ansible_ssh_common_args: "${ansible_ssh_common_args}"
+systemd_dir: "${systemd_dir}"
+master_ip: "{{ hostvars[groups['master'][0]]['ansible_host'] | default(groups['master'][0]) }}"
+extra_server_args: "${extra_server_args}"
+extra_agent_args: "${extra_agent_args}"
