@@ -22,7 +22,7 @@ jobs:
         RELEASE_BRANCHES: main
 
     - name: Bump version and push tag (beta)
-      uses: anothrNick/github-tag-action@v1
+      uses: anothrNick/github-tag-action@1.51.0
       if: github.ref == 'refs/heads/develop'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
